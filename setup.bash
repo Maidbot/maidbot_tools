@@ -7,12 +7,12 @@ uf () {
     echo $ROS_MASTER_URI;
 }
 
-ufr () {
-    if [[ $@ ]]; then
-        export ROS_MASTER_URI="http://freight$@:11311"
-    fi;
-    echo $ROS_MASTER_URI;
-}
+# ufr () {
+#     if [[ $@ ]]; then
+#         export ROS_MASTER_URI="http://freight$@:11311"
+#     fi;
+#     echo $ROS_MASTER_URI;
+# }
 
 ul () {
     if [[ $@ ]]; then
@@ -31,10 +31,10 @@ sf () {
     fi;
 }
 
-sfr () {
-    if [[ $@ && $FETCH_USER ]]; then
-        ssh $FETCH_USER@freight$@
-    elif [[ $@ ]]; then
-        ssh freight$@
-    fi;
-}
+# sfr () {
+#     if [[ $@ && $FETCH_USER ]]; then
+#         ssh $FETCH_USER@freight$@
+#     elif [[ $@ ]]; then
+#         ssh freight$@
+#     fi;
+# }

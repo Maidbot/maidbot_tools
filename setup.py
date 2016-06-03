@@ -4,9 +4,9 @@ from distutils.core import setup
 from catkin_pkg.python_setup import generate_distutils_setup
 
 d = generate_distutils_setup(
-    packages=['fetch_tools', 'fetch_tools.commands'],
+    packages=['maidbot_tools', 'maidbot_tools.commands'],
     package_dir={'': 'src'},
-    scripts=['scripts/fetch']
+    scripts=['scripts/maid']
 )
 
 setup(**d)

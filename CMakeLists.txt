@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(fetch_tools)
+project(maidbot_tools)
 
 find_package(catkin REQUIRED)
 catkin_package()

@@ -1,26 +1,29 @@
-Fetch Tools
-===========
+# Maidbot Tools
 
-This package contains the `fetch` utility to make development
-easier. For full details of command usage and arguments, run `fetch
--h` and `fetch COMMAND -h`. Below summarizes installation and common
-usage.
+This package contains the `maid` utility to make development easier.
+For full details of command usage and arguments,
+run `maid -h` and `maid COMMAND -h`.
 
-Intended Workflow
------------------
+This package is forked from, and thus heavily based on,
+[fetchrobotics/fetch_tools](https://github.com/fetchrobotics/fetch_tools)
+
+The instructions below summarize installation and common usage.
+
+## Intended Workflow
 
 This tool was written to help make it easier to develop code and
 switch between robots with ease. It works by inferring what robot
 you're working on from `$ROS_MASTER_URI` and automating common tasks
-such as account creation, code syncing, and running commands. It
-assumes that you always edit code in your ROS Workspace and then push
-a copy of the workspace to the robot afterwards, so that you can run
-it. This keeps all code that you are developing on your computer in
-case someone takes the robot.
+such as account creation, code syncing, and running commands.
+It assumes that you always edit code in your ROS workspace
+(i.e., the developer's computer) and then push a copy of the workspace to
+the robot afterwards, so that you can build and run it.
+This keeps all code that you are developing on your computer in case someone
+takes the robot.
 
 ### Example Workflow
 
-```
+```bash
 # Start working on freight 0 for the first time
 ufr 0
 fetch create-account --fullname "Not A. Robot"
@@ -36,20 +39,25 @@ fetch push --install-deps --build
 fetch run "roslaunch my_awesome_package do_stuff.launch"
 ```
 
-Installation
-------------
+## Installation
 
-To install run, checkout the fetchrobotics/sandbox repo and run:
+To install, first clone this repository into your dev machine's ROS workspace.
+Then build using `catkin_tools`:
+
+```
+catkin build maidbot_tools
+```
+
+<!-- To install, checkout the fetchrobotics/sandbox repo and run:
 
 ```
 sudo apt-get install ros-indigo-fetch-tools
-```
+``` -->
 
 Afterwards, restart your terminal or run `source $(rospack find
 fetch_tools)/setup.bash`.
 
-Common Arguments
--------------
+## Common Arguments
 
 ### Robot
 
@@ -85,8 +93,7 @@ the value used. If not, the parameter defaults to `$USER`. To set the
 default value, add the line `export FETCH_USER=myuser` to your .bashrc
 file.
 
-`fetch` Commands
-----------------
+## The `maid` Commands
 
 ### fetch create-account
 
@@ -226,8 +233,7 @@ information that can be useful in diagnosing robot problems:
 fetch debug-snapshot
 ```
 
-Useful Aliases
---------------
+## Useful Aliases
 
 In addition to the `fetch` command, setup.bash loads some useful
 aliases for working with multiple Fetch and Freight robots.

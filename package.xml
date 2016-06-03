@@ -1,19 +1,20 @@
 <?xml version="1.0"?>
 <package>
-  <name>fetch_tools</name>
+
+  <name>maidbot_tools</name>
   <version>0.1.4</version>
-  <description>Commands for performing common operations when
-  developing on the robots. For help, run `fetch -h` and `fetch
-  COMMAND -h`.</description>
+
+  <description>
+    Commands for performing common operations when developing on the robots.
+    For help, run `maid -h` and `maid COMMAND -h`.
+    Forked from `https://github.com/fetchrobotics/fetch_tools`
+  </description>
 
   <author email="ahenning@fetchrobotics.com">Alex Henning</author>
   <maintainer email="ahenning@fetchrobotics.com">Alex Henning</maintainer>
+  <maintainer email="spmaniato@gmail.com">Spyros Maniatopoulos</maintainer>
 
   <license>BSD</license>
-
-  <url type="website">https://github.com/fetchrobotics/fetch_tools/blob/master/README.md</url>
-  <url type="repository">https://github.com/fetchrobotics/fetch_tools</url>
-  <url type="bugtracker">https://github.com/fetchrobotics/fetch_tools/issues</url>
 
   <buildtool_depend>catkin</buildtool_depend>
 
@@ -25,4 +26,5 @@
   <run_depend>sshpass</run_depend>
 
   <export></export>
+
 </package>
